@@ -1,11 +1,4 @@
 terraform {
-  provider aws {
-    region  = var.region
-    profile = "himansu"
-}
-}
-
-terraform {
   required_version = "<= 1.4.1"
   required_providers {
     aws = {
