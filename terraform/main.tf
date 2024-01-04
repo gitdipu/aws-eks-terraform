@@ -1,18 +1,17 @@
 terraform {
-  backend "remote" {
-    hostname = "app.terraform.io"
-    organization = "hima-tf"
+  provider "aws" {
+    region  = var.region
+    profile = "himansu"
+}
+}
 
-  workspaces {
-      name = "aws_eks"
-      # name = "Portfolio_Repo"
-    }
-  }
-
-    required_providers {
+terraform {
+  required_version = "<= 1.2.9"
+  required_providers {
     aws = {
+      version = "<=4.0.0"
       source  = "hashicorp/aws"
-      version = "4.33.0"
     }
   }
 }
+
