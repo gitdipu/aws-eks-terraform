@@ -1,7 +1,7 @@
 terraform {
   backend "remote" {
     hostname = "app.terraform.io"
-    organization = "RS-terraform"
+    organization = "hima-tf"
 
   workspaces {
       name = "aws_eks"
